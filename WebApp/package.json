@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "npm install",
     "build": "tsc -p tsconfig.json",
-    "test": "jest --env=node --colors --coverage test",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "newman": "newman run test/renderstreaming.postman_collection.json",
     "start": "node ./build/index.js",
     "dev": "ts-node ./src/index.ts",
@@ -45,5 +45,6 @@
     "targets": [
       "node10"
     ]
-  }
+  },
+  "type": "module"
 }
