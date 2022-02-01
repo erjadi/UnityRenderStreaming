@@ -12,10 +12,12 @@ pool:
 steps:
 - task: AzureFileCopy@4
   inputs:
+    SourcePath: 'd:\1\a\s'
     azureSubscription: 'erjadi - Microsoft Azure Internal Consumption (a7c83c93-d0ea-4b13-9bc5-77144f05bfc6)'
     Destination: 'AzureVMs'
     storage: 'ericjadideployment'
     resourceGroup: 'VMP2PMANAGER_GROUP'
+    MachineNames: 'vmp2pmanager'
     vmsAdminUserName: 'adminuser'
     vmsAdminPassword: 'P@$$w0rd1234!'
     TargetPath: 'c:\p2pserver'
