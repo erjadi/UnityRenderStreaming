@@ -21,4 +21,5 @@ steps:
     vmsAdminUserName: 'adminuser'
     vmsAdminPassword: 'P@$$w0rd1234!'
     TargetPath: 'c:\p2pserver'
+    enableCopyPrerequisites: true
     CleanTargetBeforeCopy: true
