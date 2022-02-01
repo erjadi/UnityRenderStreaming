@@ -12,7 +12,7 @@ pool:
 steps:
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: 'd:\1\a\s'
+    SourcePath: 'D:\a\1\s'
     azureSubscription: 'erjadi - Microsoft Azure Internal Consumption (a7c83c93-d0ea-4b13-9bc5-77144f05bfc6)'
     Destination: 'AzureVMs'
     storage: 'ericjadideployment'
