@@ -24,6 +24,6 @@ steps:
       call pack_webapp.cmd
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)/Bin~'
+    PathtoPublish: '$(Build.Repository.LocalPath)/Webapp/Bin~'
     ArtifactName: 'drop'
     publishLocation: 'Container'
