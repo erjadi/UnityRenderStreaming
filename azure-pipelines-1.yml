@@ -20,10 +20,15 @@ steps:
   inputs:
     script: |
       echo $(Build.Repository.LocalPath)
-      cd $(Build.Repository.LocalPath)
-      call pack_webapp.cmd
+      cd $(Build.Repository.LocalPath)/p2p-manager
+      npm install
+      npm audit fix --force
+      npm run build
+      npm run pack
+      md bin
+      move webserver.exe .\bin\
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)/Webapp/Bin~'
+    PathtoPublish: '$(Build.Repository.LocalPath)/p2p-manager/bin'
     ArtifactName: 'drop'
     publishLocation: 'Container'
